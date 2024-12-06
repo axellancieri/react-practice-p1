@@ -20,7 +20,7 @@ function App() {
         <input type="text" />
 
       </form>
-
+<table></table>
       
     </>
   )
