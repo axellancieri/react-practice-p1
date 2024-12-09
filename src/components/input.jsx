@@ -1,19 +1,30 @@
-export default function Input() {
+import { useState } from 'react';
+
+export default function Input({inputValue = "", labelName}) {
+
+
+    const [inputCalculator, setInputCalculator] = useState(inputValue);
+
+    function handleChange(event) {
+        
+        const newValue = event.target.value;
+
+        setInputCalculator(newValue);   
+        
+        console.log(newValue)
+  
+    }
+
+
+    
     return (
-        <form action="" id="user-input">
-
-        <label htmlFor="" className="input-group">Sabalaketum</label>
-        <input type="text" />
-
-        <label htmlFor="" className="input-group">Sabalaketum</label>
-        <input type="text" />
-
-        <label htmlFor="" className="input-group">Sabalaketum</label>
-        <input type="text" />
-
-        <label htmlFor="" className="input-group">Sabalaketum</label>
-        <input type="text" />
-
-    </form>
+        <>
+            <label className="input-group">{labelName}</label>
+            <input 
+            type="text"
+            value={inputCalculator}
+            onChange={handleChange}
+            />
+        </>
     )
 }
