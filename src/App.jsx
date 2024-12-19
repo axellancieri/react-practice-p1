@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Input from './components/input'
 import Table from './components/table'
 
@@ -9,21 +9,21 @@ function App() {
         <Input
           labelName="Initial Investment"
         />
-        {/* <Input
-          inputValue={inputCalculator}
+        <Input
+          // inputValue={inputCalculator}
           labelName="Annual Investment"
-          handleOnChange={handleChange}
+          // handleOnChange={handleChange}
         />
         <Input
-          inputValue={inputCalculator}
+          // inputValue={inputCalculator}
           labelName="Expected Return"
-          handleOnChange={handleChange}
+          // handleOnChange={handleChange}
         />
         <Input
-          inputValue={inputCalculator}
+          // inputValue={inputCalculator}
           labelName="Duration"
-          handleOnChange={handleChange}
-        /> */}
+          // handleOnChange={handleChange}
+        />
       </form>
       <table id="result">
         <thead className="center">
