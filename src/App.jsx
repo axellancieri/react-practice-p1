@@ -1,28 +1,49 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import Input from './components/input'
 import Table from './components/table'
 
 function App() {
+
+  const [inputCalculator, setInputCalculator] =  useState({
+    initialInvestment: "",
+    annualInvestment: "",
+    expectedReturn: "",
+    duration: "",
+  });;
+
+  // const getObjName = labelName.split(" ").join("").toLowerCase();
+
+  const handleInputChange = (name, value) => {
+    setInputCalculator(prevObj => ({
+      ...prevObj,
+      [name]: value
+    }))
+  }
+
+  console.log(inputCalculator)
+
   return (
     <>
       <form action="" id="user-input">
         <Input
+          inputCalculator={inputCalculator.initialInvestment}
           labelName="Initial Investment"
+          setInputCalculatorProp={(value) => {handleInputChange("initialInvestment", value)}}
         />
         <Input
-          // inputValue={inputCalculator}
+          inputCalculator={inputCalculator.annualInvestment}
           labelName="Annual Investment"
-          // handleOnChange={handleChange}
+          setInputCalculatorProp={(value) => {handleInputChange("annualInvestment", value)}}
         />
         <Input
-          // inputValue={inputCalculator}
+          inputCalculator={inputCalculator.expectedReturn}
           labelName="Expected Return"
-          // handleOnChange={handleChange}
+          setInputCalculatorProp={(value) => {handleInputChange("expectedReturn", value)}}
         />
         <Input
-          // inputValue={inputCalculator}
+          inputCalculator={inputCalculator.duration}
           labelName="Duration"
-          // handleOnChange={handleChange}
+          setInputCalculatorProp={(value) => {handleInputChange("duration", value)}}
         />
       </form>
       <table id="result">

@@ -1,21 +1,26 @@
-import { useState } from 'react';
-
-export default function Input({inputValue = "", labelName}) {
-
-
-    const [inputCalculator, setInputCalculator] = useState(inputValue);
+export default function Input({inputCalculator, setInputCalculatorProp, labelName}) {
+  
+        // const getInvestObj = {
+    //     [getObjName]: inputCalculator
+    // };
+    // const getInvestObjAll = {
+    //     ...getInvestObj,
+    //     [getObjName]: inputCalculator
+    // }
 
     function handleChange(event) {
         
         const newValue = event.target.value;
-
-        setInputCalculator(newValue);   
         
-        console.log(newValue)
+        setInputCalculatorProp(newValue);   
+        
+        
   
     }
 
 
+    // console.log(getInvestObj)
+    
     
     return (
         <>
