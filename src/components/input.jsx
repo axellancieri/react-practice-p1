@@ -1,26 +1,15 @@
 export default function Input({inputCalculator, setInputCalculatorProp, labelName}) {
+
+    const getObjNameUp = labelName.split(" ").join("").toLowerCase();
   
-        // const getInvestObj = {
-    //     [getObjName]: inputCalculator
-    // };
-    // const getInvestObjAll = {
-    //     ...getInvestObj,
-    //     [getObjName]: inputCalculator
-    // }
 
     function handleChange(event) {
         
         const newValue = event.target.value;
         
-        setInputCalculatorProp(newValue);   
+        setInputCalculatorProp(getObjNameUp, newValue);   
         
-        
-  
-    }
-
-
-    // console.log(getInvestObj)
-    
+    }  
     
     return (
         <>
